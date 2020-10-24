@@ -1,0 +1,1 @@
+All the processed data is stored in this directory

@@ -1,0 +1,1 @@
+All the raw data is stored in this directory
