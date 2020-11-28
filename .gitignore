@@ -1,3 +1,4 @@
 .idea/
 data/raw/matches.json
 venv/
+**/__pycache__/
