@@ -42,6 +42,9 @@ collects all the data that was officially provided by the game.
 
 - **Keyvan Khademi**: contributing to the entropy since 1997.
 
+## Presentation
+The video is available at ./solo-project-presentation.mkv or on [Youtube](https://www.youtube.com/watch?v=uw_s2Hy8Ufw).
+
 ## References
 
 [1] https://en.wikipedia.org/wiki/Dota_2
