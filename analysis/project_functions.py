@@ -179,3 +179,26 @@ def load_processed_data():
     pair_players_df = pd.read_csv('../data/processed/pair_players.csv').dropna()
 
     return matches_df, players_df, pair_players_df
+
+
+def graph_generator():
+    pair_players_df = pd.read_csv('data/processed/pair_players.csv').dropna()
+
+    players = pair_players_df[pair_players_df['winrate'] > 0.63]['player1'].unique()
+
+    for i in players:
+        print(int(i))
+    for _, row in pair_players_df[pair_players_df['player1'].isin(players) & pair_players_df['player2'].isin(players)].iterrows():
+        if row['winrate'] > 0.6 and row['player1'] < row['player2']:
+            print("{} {} {:.2f}%".format(int(row['player1']), int(row['player2']), row['winrate']*100))
+
+
+def final_graph_generator():
+    pair_players_df = pd.read_csv('data/processed/pair_players.csv').dropna()
+    players = [97.0, 74.0, 114.0, 87.0, 95.0]
+
+    for i in players:
+        print(int(i))
+    for _, row in pair_players_df[pair_players_df['player1'].isin(players) & pair_players_df['player2'].isin(players)].iterrows():
+        if row['player1'] < row['player2']:
+            print("{} {} {:.2f}%".format(int(row['player1']), int(row['player2']), row['winrate']*100))
